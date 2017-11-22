@@ -8,7 +8,7 @@ Install npm in your project
 
 	$ npm install
 	
-Install install gulp
+Install gulp
 
 	$ npm install -g gulp
 	
@@ -29,7 +29,9 @@ Now we just need to follow the installer:
 
 	1) Select “Automatic” under the set up options.
 	2) When asked if the given location is your project folder select “yes”.
-	3) Type resources/assets/semantic when asked where to put semantic-ui to specify where our semantic folder will be. In Laravel 		the assets folder makes the most sense.
+	3) Type resources/assets/semantic when asked where to put semantic-ui
+	to specify where our semantic folder will be. In Laravel
+	the assets folder makes the most sense.
 
 Navigate to resources/assets/semantic and run.
 
