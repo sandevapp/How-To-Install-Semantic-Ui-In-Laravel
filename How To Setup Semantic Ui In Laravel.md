@@ -1,36 +1,47 @@
-# How to setup Laravel 5.5 + Vue.js + Semantic UI in project
+# How to setup Laravel 5.5 + Semantic UI in project
 
-Create a **new Laravel project** with _composer_:
+Create a laravel project
 
 	$ composer create-project Laravel/Laravel myproject
 
-Install Laravel Elixir, Vue.js, Gulp, etc.:
+Install npm in your project
 
 	$ npm install
 	
-Install Laravel Elixir, Vue.js, Gulp, etc.:
+Install install gulp
 
 	$ npm install -g gulp
 	
 
-Install **Semantic UI**:
+First, with administrator privileges, run npm with the --ignore-scripts flag, otherwise semantic-ui will launch the installer automatically, which can cause problems if you cancel halfway through.
 
-	$ npm install semantic-ui --save
-	...
-	> Automatic
-	> Yes
-	? semantic/
+	$ npm install semantic-ui --save-dev --ignore-scripts
 
+Once it’s downloaded navigate to 
 
-To build Semantic UI:
+	cd node_modules/semantic-ui
 
-	$ cd semantic
+Then run the following to start the installer:
+
+	$ gulp install
+
+Now we just need to follow the installer:
+
+	1) Select “Automatic” under the set up options.
+	2) When asked if the given location is your project folder select “yes”.
+	3) Type resources/assets/semantic when asked where to put semantic-ui to specify where our semantic folder will be. In Laravel 		the assets folder makes the most sense.
+
+Navigate to resources/assets/semantic and run.
+
 	$ gulp build
 	
+Everything will now be outputted to:
+
+	resources/assets/semantic/dist/semantic.css:
+
 Edit in Asset/app.scss
 
-	@import "node_modules/semantic-ui/dist/semantic";
-
+	@import "../semantic-ui/dist/semantic";
 
 Modify the `gulpfile.js` to include the Semantic UI's files:
 
